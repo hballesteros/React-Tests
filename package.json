@@ -10,7 +10,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:01": "npm run dev --workspace=projects/01-react-prueba-tecnica",
-    "dev:02": "npm run dev --workspace=projects/02-react-buscador-peliculas"
+    "dev:02": "npm run dev --workspace=projects/02-react-buscador-peliculas",
+    "dev:03": "npm run dev --workspace=projects/03-tic-tac-toe"
   },
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"
@@ -20,5 +21,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "canvas-confetti": "1.6.0"
+  }
 }
