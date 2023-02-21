@@ -13,11 +13,11 @@
     "dev:02": "npm run dev --workspace=projects/02-react-buscador-peliculas",
     "dev:03": "npm run dev --workspace=projects/03-tic-tac-toe"
   },
-  "eslintConfig": {
-    "extends": "./node_modules/standard/eslintrc.json"
-  },
   "devDependencies": {
     "standard": "^17.0.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
   },
   "keywords": [],
   "author": "",
