@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { getGifsByCategory } from './services/getGifsByCategory'
 
 function App () {
@@ -17,7 +17,7 @@ function App () {
 
   const getGifs = async () => {
     setIsLoading(true)
-    const newGifs = await getGifsByCategory('Pokemon', 10, pageNumber)
+    const newGifs = await getGifsByCategory('avengers', 10, pageNumber)
     setGifs(prevGifs => [...prevGifs, ...newGifs])
     setIsLoading(false)
   }
@@ -34,7 +34,7 @@ function App () {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  useEffect(() => {
+  useMemo(() => {
     getGifs()
   }, [pageNumber])
 
