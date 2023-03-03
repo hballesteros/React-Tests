@@ -1,5 +1,5 @@
 {
-  "name": "08-infinity-scroll",
+  "name": "10-midu-router",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,9 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "path-to-regexp": "6.2.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "uuid": "9.0.0"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",

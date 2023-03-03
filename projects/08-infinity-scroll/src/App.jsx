@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { getGifsByCategory } from './services/getGifsByCategory'
+import { v4 as uuidv4 } from 'uuid'
 
 function App () {
   const [gifs, setGifs] = useState([])
@@ -46,7 +47,7 @@ function App () {
         {
           gifs.map(gif => (
             <GifItem
-              key={gif.id}
+              key={uuidv4()}
               {...gif}
             />
           ))
