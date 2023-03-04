@@ -23,13 +23,16 @@ export function Router ({ children, routes = [], defaultComponent: DefaultCompon
   let routeParams = {}
 
   // add routes from children <Route /> components
-  const routesFromChildren = Children.map(children, ({ props, type }) => {
+  const routesFromChildren = Children.map(children, child => {
+    const { props, type } = child
     const { name } = type
     const isRoute = name === 'Route'
     return isRoute ? props : null
   })
 
   const routesToUse = routes.concat(routesFromChildren).filter(Boolean)
+
+  console.log({ routesToUse })
 
   const Page = routesToUse.find(({ path }) => {
     if (path === currentPath) return true
