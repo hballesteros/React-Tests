@@ -12,6 +12,10 @@ const LazyAboutPage = lazy(() => import('./pages/About'))
 
 const appRoutes = [
   {
+    path: '/:lang/about',
+    Component: LazyAboutPage
+  },
+  {
     path: '/search/:query', // queremos capturar :query
     Component: SearchPage
   }
